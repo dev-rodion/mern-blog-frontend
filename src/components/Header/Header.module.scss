@@ -8,20 +8,26 @@
 .inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
+  display: block;
   background-color: #000000;
   color: #fff;
   font-weight: 700;
   line-height: 35px;
+  //height: 35px;
   text-transform: uppercase;
   letter-spacing: 0.15px;
   border-radius: 5px;
   padding: 0 10px;
   text-decoration: none;
+  min-width: fit-content;
   @media (hover: hover) {
-    background-color: #4361ee;
+    &:hover {
+      background-color: #4361ee;
+    }
   }
 }
 

@@ -1,7 +1,17 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5 !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
