@@ -1,14 +1,14 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { Header } from "./components/";
-import { Home } from "./pages";
+import { FullPost, Home } from "./pages";
 
 function App() {
   return (
     <>
       <Header />
       <Container maxWidth="lg">
-        <Home />
+        {/*<Home />*/} <FullPost />
       </Container>
     </>
   );

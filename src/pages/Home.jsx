@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid, Tab, Tabs } from "@mui/material";
-import { Post } from "../components";
-import { TagsBlock } from "../components/";
-import CommentsBlock from "../components/CommentsBlock";
+import { CommentsBlock, Post, TagsBlock } from "../components";
 
 const Home = () => {
   return (
