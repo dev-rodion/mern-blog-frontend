@@ -9,8 +9,9 @@
 }
 
 .copyright {
-  width: fit-content;
-  margin: 0 auto;
+  display: block !important;
+  width: fit-content !important;
+  margin: 0 auto !important;
   a {
     color: #4361ee;
     text-decoration: underline;
