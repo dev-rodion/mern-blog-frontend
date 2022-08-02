@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Tab, Tabs } from "@mui/material";
 import { Post } from "../components";
 import { TagsBlock } from "../components/";
+import CommentsBlock from "../components/CommentsBlock";
 
 const Home = () => {
   return (
@@ -39,6 +40,26 @@ const Home = () => {
         <Grid xs={4} item>
           <TagsBlock
             items={["react", "nodejs", "express", "mongodb"]}
+            isLoading={false}
+          />
+
+          <CommentsBlock
+            items={[
+              {
+                user: {
+                  username: "Liam Williams",
+                  avatarUrl: "https://mui.com/static/images/avatar/1.jpg",
+                },
+                text: "This is a test comment",
+              },
+              {
+                user: {
+                  username: "Oliver Smith",
+                  avatarUrl: "https://mui.com/static/images/avatar/2.jpg",
+                },
+                text: "When displaying three lines or more, the avatar is not aligned at the top. You should set the prop to align the avatar at the top",
+              },
+            ]}
             isLoading={false}
           />
         </Grid>
