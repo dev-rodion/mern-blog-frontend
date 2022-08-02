@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import { Header } from "./components/";
+import { Footer, Header } from "./components/";
 import { FullPost, Home } from "./pages";
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
         {/*<Home />*/}
         <FullPost />
       </Container>
+      <Footer />
     </>
   );
 }

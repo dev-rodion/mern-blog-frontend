@@ -9,7 +9,7 @@ const Header = () => {
   const onClickLogout = () => {};
 
   return (
-    <div className={styles.root}>
+    <header className={styles.root}>
       <Container maxWidth="lg">
         <div className={styles.inner}>
           <a href="/" className={styles.logo}>
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </header>
   );
 };
 
