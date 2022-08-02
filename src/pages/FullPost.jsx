@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "../components";
+import { AddComment, Post } from "../components";
 import { CommentsBlock } from "../components/";
 
 const FullPost = () => {
@@ -46,7 +46,8 @@ const FullPost = () => {
           },
         ]}
         isLoading={false}
-      ></CommentsBlock>
+      />
+      <AddComment />
     </>
   );
 };

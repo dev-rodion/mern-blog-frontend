@@ -8,7 +8,8 @@ function App() {
     <>
       <Header />
       <Container maxWidth="lg">
-        {/*<Home />*/} <FullPost />
+        {/*<Home />*/}
+        <FullPost />
       </Container>
     </>
   );
