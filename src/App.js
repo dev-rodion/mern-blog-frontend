@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { Footer, Header } from "./components/";
-import { FullPost, Home, Login } from "./pages";
+import { FullPost, Home, Login, Registration } from "./pages";
 import styles from "./App.module.scss";
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
       <Container className={styles.content} maxWidth="lg">
         {/*<Home />*/}
         {/*<FullPost />*/}
-        <Login />
+        {/*<Login />*/}
+        <Registration />
       </Container>
       <Footer />
     </div>
