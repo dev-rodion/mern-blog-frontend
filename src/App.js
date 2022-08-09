@@ -3,17 +3,24 @@ import { Container } from "@mui/material";
 import { Footer, Header } from "./components/";
 import { AddPost, FullPost, Home, Login, Registration } from "./pages";
 import styles from "./App.module.scss";
+import { Route, Routes } from "react-router-dom";
+
+import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
   return (
     <div className={styles.wrapper}>
+      <ScrollToTop />
       <Header />
       <Container className={styles.content} maxWidth="lg">
-        {/* <Home /> */}
-        {/*<FullPost />*/}
-        <AddPost />
-        {/*<Login />*/}
-        {/*<Registration />*/}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/posts/:id" element={<FullPost />} />
+          <Route path="/posts/:id/edit" element={<AddPost />} />
+          <Route path="/posts/create" element={<AddPost />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Registration />} />
+        </Routes>
       </Container>
       <Footer />
     </div>

@@ -11,6 +11,7 @@ import {
 } from "@mui/icons-material";
 import { UserInfo } from "../index";
 import PostSkeleton from "./Skeleton";
+import { Link } from "react-router-dom";
 
 const Post = ({
   id,
@@ -36,11 +37,11 @@ const Post = ({
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
         <div className={styles.editButtons}>
-          <a href={`/posts/${id}/edit`}>
+          <Link to={`/posts/${id}/edit`}>
             <IconButton color="primary">
               <EditIcon />
             </IconButton>
-          </a>
+          </Link>
           <IconButton onClick={onClickRemove} color="secondary">
             <DeleteIcon />
           </IconButton>
@@ -48,13 +49,13 @@ const Post = ({
       )}
 
       {imageUrl && (
-        <a href={`/posts/${id}`}>
+        <Link to={`/posts/${id}`}>
           <img
             className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
             src={imageUrl}
             alt={title}
           />
-        </a>
+        </Link>
       )}
 
       <div className={styles.wrapper}>
@@ -64,12 +65,12 @@ const Post = ({
           <h2
             className={clsx(styles.title, { [styles.titleFull]: isFullPost })}
           >
-            {isFullPost ? title : <a href={`/posts/${id}`}>{title}</a>}
+            {isFullPost ? title : <Link to={`/posts/${id}`}>{title}</Link>}
           </h2>
           <ul className={styles.tags}>
             {tags.map((name) => (
               <li key={name}>
-                <a href={`/tag/${name}`}>#{name}</a>
+                <Link to={`/tag/${name}`}>#{name}</Link>
               </li>
             ))}
           </ul>

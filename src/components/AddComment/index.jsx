@@ -8,7 +8,7 @@ const AddComment = () => {
       <div className={styles.root}>
         <Avatar
           className={styles.avatar}
-          src="https://mui.com/static/images/avatar/0.jpg"
+          src="https://mui.com/static/images/avatar/1.jpg"
         />
         <div className={styles.form}>
           <TextField

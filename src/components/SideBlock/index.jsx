@@ -5,7 +5,7 @@ import { Paper, Typography } from "@mui/material";
 const SideBlock = ({ title, children }) => {
   return (
     <Paper className={styles.root}>
-      <Typography variant="h6" class={styles.title}>
+      <Typography variant="h6" className={styles.title}>
         {title}
       </Typography>
       {children}
