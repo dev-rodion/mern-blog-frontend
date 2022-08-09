@@ -32,15 +32,6 @@ const Post = ({
 
   const onClickRemove = () => {};
 
-  const current = new Date();
-  const day =
-    current.getDay() >= 10 ? current.getDay() : "0" + current.getDay();
-  const month =
-    current.getMonth() >= 9
-      ? current.getMonth() + 1
-      : "0" + (current.getMonth() + 1);
-  const date = day + "." + month + "." + current.getFullYear();
-
   return (
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
@@ -67,7 +58,8 @@ const Post = ({
       )}
 
       <div className={styles.wrapper}>
-        <UserInfo {...user} additional={createdAt} />
+        <UserInfo {...user} additionalText={createdAt} />
+
         <div className={styles.indention}>
           <h2
             className={clsx(styles.title, { [styles.titleFull]: isFullPost })}
@@ -90,10 +82,6 @@ const Post = ({
             <li>
               <CommentIcon />
               <span>{commentsCount}</span>
-            </li>
-            <li>
-              <ClockIcon />
-              <span>{date}</span>
             </li>
           </ul>
         </div>

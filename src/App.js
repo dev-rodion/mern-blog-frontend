@@ -9,10 +9,10 @@ function App() {
     <div className={styles.wrapper}>
       <Header />
       <Container className={styles.content} maxWidth="lg">
-        {/*<Home />*/}
+        <Home />
         {/*<FullPost />*/}
         {/*<Login />*/}
-        <Registration />
+        {/*<Registration />*/}
       </Container>
       <Footer />
     </div>
