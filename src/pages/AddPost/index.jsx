@@ -41,12 +41,15 @@ const AddPost = () => {
           Delete
         </Button>
       )}
-      {imageUrl && <img className={styles.image} src={`http://localhost:4444${imageUrl}`} alt="Uploaded Image" />}
+      {imageUrl && (
+        <input className={styles.image} type="image" img src={`http://localhost:4444${imageUrl}`} alt="photo" />
+      )}
+      {/* <img className={styles.image} src={`http://localhost:4444${imageUrl}`} alt={"Uploaded Image"} /> */}
       <br />
       <br />
-      <TextField className={styles.title} variant="standard" placeholder="Post Title" fullWidth autoFocus/>
+      <TextField className={styles.title} variant="standard" placeholder="Post Title" fullWidth autoFocus />
       <TextField className={styles.tags} variant="standard" placeholder="Tags" fullWidth />
-      <SimpleMDE className={styles.editor} style={{width: "100%"}} onChange={onChange} options={options} />
+      <SimpleMDE className={styles.editor} style={{ width: "100%" }} value={value} onChange={onChange} options={options} />
       <div className={styles.buttons}>
         <Button size="large" variant="contained">
           Sumbit
