@@ -12,15 +12,15 @@ import store from "./redux/store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    <CssBaseline>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter store={store}>
-          <Provider>
-            <App />
-          </Provider>
-        </BrowserRouter>
-      </ThemeProvider>
-    </CssBaseline>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <CssBaseline>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </BrowserRouter>
+    </ThemeProvider>
+  </CssBaseline>
+  // </React.StrictMode>
 );

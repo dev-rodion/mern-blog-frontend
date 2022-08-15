@@ -10,7 +10,6 @@ export default function ScrollToTop() {
       left: 0,
       behavior: "instant",
     });
-    console.log(pathname);
   }, [pathname]);
 
   return null;

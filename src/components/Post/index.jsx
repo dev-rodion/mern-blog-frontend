@@ -30,6 +30,23 @@ const Post = ({
     return <PostSkeleton />;
   }
 
+  const date = new Date(createdAt);
+  const monthArr = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dateString = date.getDay() + " " + monthArr[date.getMonth()] + " " + date.getFullYear();
+
   const onClickRemove = () => {};
 
   return (
@@ -54,7 +71,7 @@ const Post = ({
       )}
 
       <div className={styles.wrapper}>
-        <UserInfo {...user} additionalText={createdAt} />
+        <UserInfo {...user} additionalText={dateString} />
 
         <div className={styles.indention}>
           <h2 className={clsx(styles.title, { [styles.titleFull]: isFullPost })}>

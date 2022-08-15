@@ -1,12 +1,13 @@
 import React from "react";
+import { Avatar } from "@mui/material";
 import styles from "./UserInfo.module.scss";
 
 const UserInfo = ({ avatarUrl, username, additionalText }) => {
   return (
     <div className={styles.root}>
-      <img
+      <Avatar
         className={styles.avatar}
-        src={avatarUrl || "/noavatar.png"}
+        src={avatarUrl || ""}
         alt={username}
       />
       <div className={styles.userDetails}>
