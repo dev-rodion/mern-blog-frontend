@@ -8,8 +8,7 @@ const MyComponent = () => {
       <Container maxWidth="lg">
         <div className={styles.inner}>
           <Typography variant="subtitle2" className={styles.copyright}>
-            <b>MERN Blog</b> developed by{" "}
-            <a href="https://github.com/dev-rodion">RodionDev</a>
+            <b>MERN Blog</b> developed by <a href="https://github.com/dev-rodion">RodionDev</a>
           </Typography>
         </div>
       </Container>

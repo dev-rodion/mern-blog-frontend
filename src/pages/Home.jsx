@@ -53,7 +53,7 @@ const Home = () => {
           {isTagsLoading ? (
             <TagsBlock items={[...Array(5)]} isLoading={true} />
           ) : (
-            <TagsBlock items={["react", "nodejs", "express", "mongodb"]} isLoading={false} />
+            <TagsBlock items={tags.items} isLoading={false} />
           )}
 
           <CommentsBlock

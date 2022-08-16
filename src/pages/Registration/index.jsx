@@ -14,12 +14,7 @@ const Registration = () => {
       <TextField className={styles.field} label="Username" fullWidth />
       <TextField className={styles.field} label="Email" fullWidth />
       <TextField className={styles.field} label="Password" fullWidth />
-      <Button
-        className={styles.button}
-        size="large"
-        variant="contained"
-        fullWidth
-      >
+      <Button className={styles.button} size="large" variant="contained" fullWidth>
         Submit
       </Button>
     </Paper>

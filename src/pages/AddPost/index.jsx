@@ -49,7 +49,13 @@ const AddPost = () => {
       <br />
       <TextField className={styles.title} variant="standard" placeholder="Post Title" fullWidth autoFocus />
       <TextField className={styles.tags} variant="standard" placeholder="Tags" fullWidth />
-      <SimpleMDE className={styles.editor} style={{ width: "100%" }} value={value} onChange={onChange} options={options} />
+      <SimpleMDE
+        className={styles.editor}
+        style={{ width: "100%" }}
+        value={value}
+        onChange={onChange}
+        options={options}
+      />
       <div className={styles.buttons}>
         <Button size="large" variant="contained">
           Sumbit
