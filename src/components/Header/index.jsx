@@ -3,9 +3,11 @@ import React from "react";
 import styles from "./Header.module.scss";
 import { Button, Container } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectIsAuth } from "../../redux/slices/auth";
 
 const Header = () => {
-  const isAuth = false;
+  const isAuth = useSelector(selectIsAuth);
 
   const onClickLogout = () => {};
 

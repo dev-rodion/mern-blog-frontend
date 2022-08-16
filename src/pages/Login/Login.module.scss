@@ -19,4 +19,8 @@
   font-size: 18px;
   //font-weight: 600;
   height: 56px !important;
+  &Error {
+    background-color: rgba($color: #000000, $alpha: 0.3) !important;
+    pointer-events: none;
+  }
 }

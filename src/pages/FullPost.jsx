@@ -22,7 +22,7 @@ const FullPost = () => {
         alert("Error: ", err.msg);
         setIsLoading(false);
       });
-  }, []);
+  }, [id]);
 
   if (isLoading) {
     return <Post isLoading={true} />;

@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchPosts());
     dispatch(fetchTags());
-  }, []);
+  }, [dispatch]);
 
   console.log("tags", tags);
 
