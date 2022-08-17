@@ -3,10 +3,12 @@ import { Grid, Tab, Tabs } from "@mui/material";
 import { CommentsBlock, Post, TagsBlock } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts, fetchTags } from "../redux/slices/posts";
+import { fetchAuthMe } from "../redux/slices/auth";
 
 const Home = () => {
   const dispatch = useDispatch();
   const { posts, tags } = useSelector((state) => state.posts);
+  const userData = useSelector((state) => state.auth.data);
 
   const isPostsLoading = posts.status === "loading";
   const isTagsLoading = tags.status === "loading";
@@ -39,7 +41,7 @@ const Home = () => {
                 viewsCount={obj.viewsCount}
                 commentsCount={3}
                 tags={obj.tags}
-                isEditable
+                isEditable={userData?._id === obj.user._id || userData?.type === "admin"}
                 key={obj._id}
                 isLoading={isPostsLoading}
               />

@@ -41,7 +41,7 @@ const FullPost = () => {
         tags={data.tags}
         isFullPost
       >
-        {data.text}
+        <div dangerouslySetInnerHTML={{ __html: data.text }}></div>
       </Post>
       <CommentsBlock
         items={[
