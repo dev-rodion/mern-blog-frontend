@@ -16,8 +16,6 @@ const Home = () => {
     dispatch(fetchTags());
   }, [dispatch]);
 
-  console.log("tags", tags);
-
   return (
     <>
       <Tabs style={{ marginBottom: 15 }} value={0} aria-label="basic tabs example">

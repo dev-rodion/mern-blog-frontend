@@ -45,7 +45,6 @@ const postsSlice = createSlice({
     },
     [fetchTags.fulfilled]: (state, action) => {
       state.tags.items = action.payload.tags;
-      console.log(action.payload);
       state.tags.status = "loaded";
     },
     [fetchTags.rejected]: (state) => {

@@ -18,7 +18,6 @@ const FullPost = () => {
       })
       .catch((err) => {
         console.log(err);
-        console.log(err.msg);
         alert("Error: ", err.msg);
         setIsLoading(false);
       });
